@@ -4,14 +4,14 @@ function buscaMusicas(){
 
     let endpoint="http://localhost:8080/apis/get-musicas/"+musica;
     fetch(endpoint)
-    .then(response=>{return response.json})
+    .then(response=>{return response.json()})
     .then(json=>{
         let lista = "";
         for(let e of json){
             lista+=`<audio controls>
-                        <source src="${e}" type="audio/mpeg">
+                        <source src="${"http://localhost:8080/musicas/"+e.nomeArquivo}" type="audio/mpeg">
                     </audio>
-                    <p>${e}</p>`
+                    <p>${e.nomeArquivo}</p>`
         }
         tag.innerHTML=lista
     }).catch(Err=>{tag.innerHTML=`<li>Erro: ${Err}</li>`})
