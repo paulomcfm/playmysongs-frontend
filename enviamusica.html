@@ -12,15 +12,15 @@
     <form method="POST" id="fdados" enctype="multipart/form-data">
         <div class="mb-3">
             <label for="file" class="form-label">Arquivo:</label>
-            <input type="file" class="form-control" id="file" name="musica">
+            <input type="file" class="form-control" id="file" name="musica" required>
         </div>
         <div class="mb-3">
             <label for="nome" class="form-label">Nome:</label>
-            <input type="text" class="form-control" id="nome" name="nome">
+            <input type="text" class="form-control" id="nome" name="nome" required>
         </div>
         <div class="mb-3">
             <label for="artista" class="form-label">Artista:</label>
-            <input type="text" class="form-control" id="artista" name="artista">
+            <input type="text" class="form-control" id="artista" name="artista" required>
         </div>
         <div class="mb-3">
             <label for="genero" class="form-label">Gênero Musical:</label>
@@ -34,7 +34,7 @@
             </select>
         </div>
     </form>
-    <button onclick="addMusica()" class="btn btn-primary">Upload</button>
+    <button onclick="validarCampos()" class="btn btn-primary">Upload</button>
 
     <div class="d-flex justify-content-center mt-3">
         <a href="index.html" class="text-center"><button class="btn btn-primary" type="button">Retornar</button></a>
