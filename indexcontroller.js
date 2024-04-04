@@ -9,7 +9,7 @@ function buscaMusicas(){
         let lista = "";
         for(let e of json){
             lista+=`<audio controls>
-                        <source src="${"http://localhost:8080/musicas/"+e.nomeArquivo}" type="audio/mpeg">
+                        <source src="${"http://localhost:8080/"+e.nomeArquivo}" type="audio/mpeg">
                     </audio>
                     <p>${e.nomeArquivo}</p>`
         }
